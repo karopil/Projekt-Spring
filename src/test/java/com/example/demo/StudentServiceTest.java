@@ -1,9 +1,10 @@
 package com.example.demo;
 
 import io.vavr.collection.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class StudentServiceTest {
 
@@ -21,7 +22,6 @@ public class StudentServiceTest {
         final StudentService service = new StudentService();
         final Student created = service.addStudent(new NewStudent("Student1", "1-2-3", "IP"));
         assertNotNull(created);
-
     }
 
     @Test

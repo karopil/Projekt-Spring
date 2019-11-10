@@ -1,5 +1,6 @@
 package com.example.demo;
 
+
 import io.vavr.collection.List;
 
 public class StudentService {
@@ -12,7 +13,7 @@ public class StudentService {
     }
 
     Student addStudent(NewStudent n_Student) {
-        Student created = new Student((students.size() + 1), n_Student.name, n_Student.numer, n_Student.grupa);
+        Student created = new Student((students.size() + 1), n_Student.name, n_Student.number, n_Student.group);
         students = students.prepend(created);
 
         return created;
