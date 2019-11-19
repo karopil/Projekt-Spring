@@ -7,10 +7,10 @@ import java.time.LocalTime;
 
 @RestController
 public class HelloController {
-
     @RequestMapping("/hello")
-    String hello() {
-        return "Hello World!" + LocalTime.now();
+            String hello() {
+        return "Hello! " + LocalTime.now();
     }
+
 
 }

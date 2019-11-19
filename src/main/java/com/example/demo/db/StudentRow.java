@@ -1,18 +1,20 @@
 package com.example.demo.db;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class StudentRow {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
-    private String number;
+    private String numer;
+    private String grupa;
+
 
     public long getId() {
         return id;
@@ -30,11 +32,27 @@ public class StudentRow {
         this.name = name;
     }
 
-    public String getNumber() {
-        return number;
+    public String getNumer() {
+        return numer;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setNumer(String numer) {
+        this.numer = numer;
+    }
+
+    public String getGrupa() {
+        return grupa;
+    }
+
+    public void setGrupa(String grupa) {
+        this.grupa = grupa;
+    }
+
+    protected StudentRow(){}
+
+    public StudentRow(String name, String numer, String grupa) {
+        this.name = name;
+        this.numer = numer;
+        this.grupa = grupa;
     }
 }
